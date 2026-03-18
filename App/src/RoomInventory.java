@@ -39,4 +39,12 @@ public class RoomInventory {
         availableByType.put(roomType, availableByType.get(roomType) - 1);
         return true;
     }
+
+    public boolean restoreRoom(String roomType) {
+        if (!hasRoomType(roomType)) {
+            return false;
+        }
+        availableByType.put(roomType, availableByType.get(roomType) + 1);
+        return true;
+    }
 }
