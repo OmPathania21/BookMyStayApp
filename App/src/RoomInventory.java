@@ -47,4 +47,8 @@ public class RoomInventory {
         availableByType.put(roomType, availableByType.get(roomType) + 1);
         return true;
     }
+
+    public java.util.Set<String> getRoomTypes() {
+        return new java.util.HashSet<>(availableByType.keySet());
+    }
 }
